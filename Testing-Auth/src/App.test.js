@@ -23,7 +23,7 @@ describe('Login component tests', ()=>{
         });
 
 
-        test('login check with right data', ()=>
+        test('login check with Correct Credentials', ()=>
         {
             const wrapper=shallow(<AuthComponent/>);
             wrapper.find('input[type="text"]').simulate('change',{target: {name: 'username', value: 'ProjectNile'}});
@@ -38,7 +38,7 @@ describe('Login component tests', ()=>{
         });
 
 
-        test('login check with wrong data', ()=>
+        test('login check with InCorrect Credentials', ()=>
         {
             const jsdomAlert = window.alert;  // remember the jsdom alert
             window.alert = () => {};  // provide an empty implementation for window.alert
